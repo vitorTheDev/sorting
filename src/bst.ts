@@ -1,4 +1,3 @@
-
 interface TreeNode<T> {
   val: T;
   left?: TreeNode<T>;
@@ -24,15 +23,15 @@ function buildTree<T>(arr: T[]) {
 
 function searchNode<T>(node: TreeNode<T>, value: T): boolean {
   if (!node) {
-    return false;
+    return false
   }
   if (value === node.val) {
     return true
   }
   if (value < node.val) {
-    return searchNode(node.left, value);
-  } else if (value > node.val) {
-    return searchNode(node.right, value);
+    return searchNode(node.left, value)
+  } else {
+    return searchNode(node.right, value)
   }
 }
 
